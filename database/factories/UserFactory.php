@@ -29,7 +29,8 @@ $factory->define(User::class, function (Faker $faker) {
 
 $factory->define(Post::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
-
+        'title' => $faker->sentence,
+        'body' => $faker->paragraph,
+        // comando para generar de nuevo migraciones y luego insertar: php artisan migrate:refresh --seed
     ];
 });
